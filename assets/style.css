@@ -1,7 +1,7 @@
 :root {
   --black: #05070c;
   --dark: #080d18;
-  --nav: #313131;
+  --nav: #e8ebf0;
   --navy: #10245c;
   --blue: #0879ff;
   --blue-light: #7db2ff;
@@ -23,17 +23,17 @@ body { margin: 0; color: var(--text); background: var(--black); font-family: var
 a { color: inherit; }
 .shell { width: min(var(--max), calc(100% - 72px)); margin-inline: auto; }
 
-.site-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid rgba(255, 255, 255, .09); background: rgba(49, 49, 49, .96); backdrop-filter: blur(13px); }
+.site-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid rgba(16, 36, 92, .16); background: rgba(232, 235, 240, .97); backdrop-filter: blur(13px); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 64px; }
-.brand { display: flex; align-items: center; gap: 12px; color: var(--white); text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 12px; color: #10245c; text-decoration: none; }
 .header-mark { display: block; width: 178px; height: auto; opacity: .98; }
-.brand-context { padding-left: 12px; border-left: 1px solid rgba(255, 255, 255, .22); color: #aeb7c9; font-family: var(--mono); font-size: 8px; font-weight: 500; letter-spacing: .12em; }
+.brand-context { padding-left: 12px; border-left: 1px solid rgba(16, 36, 92, .22); color: #536174; font-family: var(--mono); font-size: 8px; font-weight: 500; letter-spacing: .12em; }
 .nav { display: flex; align-items: center; gap: 28px; font-size: 12px; }
-.nav a { color: #cdd5e3; text-decoration: none; }
+.nav a { color: #10245c; text-decoration: none; }
 .nav a:not(.nav-cta) { display: flex; flex-direction: column; align-items: center; gap: 0; }
-.nav a:not(.nav-cta) small { color: #91a0b6; font-size: 10px; }
-.nav a:hover { color: var(--white); }
-.nav-cta { padding: 9px 17px; border-radius: 999px; color: #071023 !important; background: var(--white); font-weight: 800; }
+.nav a:not(.nav-cta) small { color: #64748b; font-size: 10px; }
+.nav a:hover { color: var(--blue); }
+.nav-cta { padding: 9px 17px; border-radius: 999px; color: var(--white) !important; background: #10245c; font-weight: 800; }
 .nav-cta:hover { color: var(--white) !important; background: var(--blue); }
 
 .hero { position: relative; min-height: 692px; background: var(--black); overflow: hidden; }

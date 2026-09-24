@@ -1,7 +1,7 @@
 :root {
   --black: #05070c;
   --dark: #0b101c;
-  --nav: #313131;
+  --nav: #e8ebf0;
   --blue: #0879ff;
   --blue-light: #7db2ff;
   --purple: #693ac1;
@@ -21,15 +21,15 @@ html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--text); background: var(--black); font-family: var(--sans); line-height: 1.65; }
 a { color: inherit; }
 .shell { width: min(var(--max), calc(100% - 72px)); margin-inline: auto; }
-.site-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid rgba(255, 255, 255, .09); background: rgba(49, 49, 49, .96); backdrop-filter: blur(13px); }
+.site-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid rgba(16, 36, 92, .16); background: rgba(232, 235, 240, .97); backdrop-filter: blur(13px); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 64px; }
-.brand { display: flex; align-items: center; gap: 12px; color: var(--white); text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 12px; color: #10245c; text-decoration: none; }
 .header-mark { display: block; width: 178px; height: auto; opacity: .98; }
-.brand-context { padding-left: 12px; border-left: 1px solid rgba(255, 255, 255, .22); color: #aeb7c9; font-family: var(--mono); font-size: 8px; letter-spacing: .12em; }
+.brand-context { padding-left: 12px; border-left: 1px solid rgba(16, 36, 92, .22); color: #536174; font-family: var(--mono); font-size: 8px; letter-spacing: .12em; }
 .nav { display: flex; align-items: center; gap: 24px; font-size: 12px; }
-.nav a { color: #cdd5e3; text-decoration: none; }
-.nav a:hover { color: var(--white); }
-.nav .nav-cta { padding: 9px 17px; border-radius: 999px; color: #071023; background: var(--white); font-weight: 800; }
+.nav a { color: #10245c; text-decoration: none; }
+.nav a:hover { color: var(--blue); }
+.nav .nav-cta { padding: 9px 17px; border-radius: 999px; color: var(--white); background: #10245c; font-weight: 800; }
 .nav .nav-cta:hover { color: var(--white); background: var(--blue); }
 .main { position: relative; min-height: calc(100vh - 64px); padding: 82px 0 110px; overflow: hidden; }
 .main::before { position: absolute; inset: 0; z-index: -2; background-image: linear-gradient(rgba(105, 134, 190, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(105, 134, 190, .055) 1px, transparent 1px); background-size: 84px 84px; mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .85), transparent 86%); content: ""; }
