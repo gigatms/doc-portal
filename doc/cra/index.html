@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CRA Doc Phase 2 · GIGA-TMS Document Portal</title>
-  <meta name="description" content="Phase 2 CRA Doc planning page for the GIGA-TMS Document Portal."
-  >
+  <meta name="description" content="Phase 2 CRA Doc A-Z model index planning page for the GIGA-TMS Document Portal.">
   <link rel="stylesheet" href="/assets/doc.css">
 </head>
 <body>
@@ -25,38 +24,41 @@
 
   <main class="main">
     <div class="shell">
-      <p class="eyebrow">PHASE 2 · CRA DOCUMENT SPACE</p>
+      <p class="eyebrow">PHASE 2 · CRA DOCUMENT INDEX</p>
       <h1>CRA Doc<br>planned for Phase 2.</h1>
-      <p class="lead">第二階段將在相關評估、產品文件與公開核准完成後，逐步建立 CRA 符合性文件入口。<span class="zh">This page reserves the future CRA Doc space; no CRA document is published or downloadable yet.</span></p>
+      <p class="lead">第二階段將在相關評估、產品文件與公開核准完成後，依產品型號建立單一 A–Z CRA Doc 索引。<span class="zh">This page reserves the future CRA Doc A–Z model index; no CRA document is published or downloadable yet.</span></p>
 
       <div class="notice">
         <p><strong>Planning status:</strong> CRA Doc is reserved as Phase 2. The current planning milestone is 11 December 2027; this page is not an official declaration, certification record or legal publication.</p>
-        <p>目前僅保留 CRA Doc 網頁空間與未來擴充架構。正式文件發布前，本頁不提供任何 CRA PDF 下載。</p>
+        <p>目前僅保留 CRA Doc 的單一 A–Z 型號索引空間。產品家族不作為目錄分類，僅保留在每筆文件 metadata 中。</p>
       </div>
 
       <section class="section" aria-labelledby="architecture-title">
         <p class="eyebrow">PHASE 2 ARCHITECTURE</p>
-        <h2 id="architecture-title">A controlled space<br>for future CRA records.</h2>
-        <p>Future CRA documents will be added only after the responsible GIGA-TMS teams complete the applicable product assessment, document review, signature approval and public-release decision.</p>
-        <p>未來 CRA 文件將依產品與型號逐步加入；公開頁面只放已完成簽署、核准公開的文件，不放置 SBOM、技術檔案、內部風險評估或 OEM 機密資料。</p>
+        <h2 id="architecture-title">One model index.<br>No family folders.</h2>
+        <p>Future CRA records will be listed in one ascending model-name index. Product family information such as RFID, 125 kHz or GP Series may remain as record metadata, but will not create separate catalogue sections or required URL path segments.</p>
+        <p>未來 CRA 文件統一依產品型號英文字母順序排列，不另設 RFID、125 kHz、GP Series 等產品家族頁面或目錄。產品家族只作為文件 metadata，方便查詢與管理。</p>
       </section>
 
-      <section class="family-grid" aria-label="Future CRA product family spaces">
-        <article class="family-card active">
-          <div class="family-top"><span>01</span><span class="status planned">PLANNED</span></div>
-          <h2>RFID</h2>
-          <p>Future CRA document space for RFID-related products and model records.</p>
-        </article>
-        <article class="family-card">
-          <div class="family-top"><span>02</span><span class="status planned">PLANNED</span></div>
-          <h2>125 kHz</h2>
-          <p>Future CRA document space for 125 kHz product records.</p>
-        </article>
-        <article class="family-card">
-          <div class="family-top"><span>03</span><span class="status planned">PLANNED</span></div>
-          <h2>GP Series</h2>
-          <p>Future CRA document space for GP series products and model records.</p>
-        </article>
+      <section class="az-index" aria-labelledby="az-title">
+        <div class="az-heading">
+          <div><p class="eyebrow">MODEL DIRECTORY</p><h2 id="az-title">CRA A–Z model list</h2></div>
+          <span class="az-rule">SORT: A → Z</span>
+        </div>
+        <nav class="az-nav" aria-label="CRA A-Z model index"><a href="#letter-a">A</a><a href="#letter-b">B</a><a href="#letter-c">C</a><a href="#letter-d">D</a><a href="#letter-e">E</a><a href="#letter-f">F</a><a href="#letter-g">G</a><a href="#letter-h">H</a><a href="#letter-i">I</a><a href="#letter-j">J</a><a href="#letter-k">K</a><a href="#letter-l">L</a><a href="#letter-m">M</a><a href="#letter-n">N</a><a href="#letter-o">O</a><a href="#letter-p">P</a><a href="#letter-q">Q</a><a href="#letter-r">R</a><a href="#letter-s">S</a><a href="#letter-t">T</a><a href="#letter-u">U</a><a href="#letter-v">V</a><a href="#letter-w">W</a><a href="#letter-x">X</a><a href="#letter-y">Y</a><a href="#letter-z">Z</a></nav>
+        <div class="model-empty" id="letter-a">
+          <span class="model-letter">A–Z</span>
+          <div><h3>No approved CRA model records published yet.</h3><p>Approved CRA records will be inserted here in ascending model-name order. Product family will remain record metadata, not a catalogue section.</p></div>
+          <span class="placeholder">PDF pending approval</span>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="metadata-title">
+        <p class="eyebrow">RECORD METADATA</p>
+        <h2 id="metadata-title">Family information stays<br>inside the record.</h2>
+        <p>When a CRA model is published, its metadata may identify the applicable product family, frequency or series without changing the single A–Z catalogue structure.</p>
+        <div class="code-block">product_family: RFID · 125 kHz · GP Series</div>
+        <p class="small">Metadata supports verification and document administration; it is not used as a required directory level.</p>
       </section>
 
       <section class="section" aria-labelledby="url-title">
@@ -70,7 +72,7 @@
       <section class="section" aria-labelledby="navigation-title">
         <p class="eyebrow">PORTAL NAVIGATION</p>
         <h2 id="navigation-title">Phase 1 is available now.</h2>
-        <p>Use the RED-DA catalogue for the current Phase 1 document programme. The CRA page will remain a planning space until approved records are ready for publication.</p>
+        <p>Use the RED-DA catalogue for the current Phase 1 document programme. The CRA A–Z page will remain a planning space until approved records are ready for publication.</p>
         <p><a class="button button-primary" href="/doc/red-da/">Open RED-DA Doc · Phase 1 <span aria-hidden="true">→</span></a></p>
       </section>
     </div>
@@ -80,7 +82,7 @@
     <div class="shell footer-grid">
       <div><strong class="footer-company-name">GIGA-TMS INC.</strong><p>Document Office<br><a href="mailto:doc@gigatms.com.tw">doc@gigatms.com.tw</a></p></div>
       <div><p class="footer-label">DOCUMENTS</p><a href="/">Document Portal Home</a><a href="/doc/red-da/">RED-DA Doc · Phase 1</a></div>
-      <div><p class="footer-label">PHASE 2</p><p>CRA Doc · planned publication 2027/12/11</p><a href="/doc/cra/">CRA Doc planning page</a></div>
+      <div><p class="footer-label">PHASE 2</p><p>CRA Doc · planned publication 2027/12/11</p><a href="/doc/cra/">CRA A–Z planning page</a></div>
     </div>
     <div class="shell footer-bottom"><span>GIGA-TMS INC. · Document Office</span><span>doc.gigatms.com.tw · Planning template</span></div>
   </footer>

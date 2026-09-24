@@ -12,7 +12,7 @@
 
 ### Phase 2 — CRA Doc
 
-第二階段才導入 CRA Doc，並以 **2027/12/11** 作為 CRA 文件公開公布的規畫節點。CRA 在 Phase 1 不列為可下載文件；目前已保留獨立規畫頁 `/doc/cra/`，並預留 RFID、125 kHz 與 GP Series 等未來產品擴充區。待相關評估、產品家族文件與公開核准完成後，再逐步加入正式頁面與 PDF 下載連結。
+第二階段才導入 CRA Doc，並以 **2027/12/11** 作為 CRA 文件公開公布的規畫節點。CRA 在 Phase 1 不列為可下載文件；目前已保留獨立規畫頁 `/doc/cra/`，未來與 RED-DA 一樣採單一 A–Z 型號索引，不依 RFID、125 kHz 或 GP Series 分成產品家族頁面。產品家族資訊只保留在每筆文件 metadata 中，待相關評估與公開核准完成後，再逐步加入正式 PDF 下載連結。
 
 ## Directory structure
 
@@ -51,6 +51,18 @@ Immutable historical version:
 ```
 
 所有型號在 HTML 目錄中依 A–Z 排列；產品家族僅作為 metadata，不直接作為主要 PDF URL 的必要路徑段，以避免分類變更時破壞既有產品 URL。
+
+CRA model alias:
+
+```text
+/doc/cra/<model>.pdf
+```
+
+CRA immutable historical version:
+
+```text
+/doc/cra/archive/<model>-v<version>-<yyyy-mm-dd>.pdf
+```
 
 ## Public / internal boundary
 
