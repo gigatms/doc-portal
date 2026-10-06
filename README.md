@@ -72,13 +72,15 @@ CRA immutable historical version:
 
 ## Status
 
-This is a static planning draft. ER750A is staged in a review branch and is not publicly published until the required Pull Request approvals are complete. Before publication, confirm the original company-approved SVG/AI/EPS wordmark, final product list, PDF approval workflow, CNAME/DNS, canonical URLs, sitemap, robots policy and reviewer ownership.
+The GitHub Pages site is now published from `main`. The revised ER750A RED-DA DoC was merged through Pull Request #1 and is available at `/doc/red-da/ER750A.pdf`. The public portal remains limited to signed and approved documents; internal technical evidence, SBOMs, risk assessments and OEM-confidential material remain outside this repository.
+
+The custom domain `doc.gigatms.com.tw` is configured in GitHub Pages, but its DNS record must resolve before the custom URL can be reached. The GitHub Pages fallback URL is `https://gigatms.github.io/doc-portal/` while DNS propagation is pending.
 
 ## Official links
 
 - Company website: <https://www.gigatms.com.tw>
 - Security reporting: <https://security.gigatms.com.tw>
-- Future document portal: <https://doc.gigatms.com.tw>
+- Official document portal: <https://doc.gigatms.com.tw>
 - Product security advisories: `/security-advisories/`
 - Security reporting: <https://security.gigatms.com.tw>
 
@@ -91,6 +93,6 @@ The advisory page incorporates the 2026-10-06 review direction:
 - Internal planning language was removed from the public empty state. The page shows the last checked date: `2026-10-06`.
 - The register now reserves seven fields: Advisory ID, CVE, Product / Scope, Severity, Status, First Published and Last Updated.
 - The page includes support-life and publication-boundary notes, and uses bilingual headings and descriptions.
-- The preview page uses `noindex, nofollow`, and the preview `robots.txt` disallows crawling. Remove these preview restrictions before the official `doc.gigatms.com.tw` launch.
+- The official portal now permits indexing through `robots.txt` and publishes a sitemap at `/sitemap.xml`.
 
 The integrator/OEM pre-notification paragraph remains pending the POL-001 §9 decision and is intentionally not presented as a public commitment yet.
