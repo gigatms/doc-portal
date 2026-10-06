@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Product Security Updates · GIGA-TMS Document Portal</title>
-  <meta name="description" content="GIGA-TMS product security update and advisory publication page.">
+  <title>產品安全公告 · Product Security Advisories · GIGA-TMS Document Portal</title>
+  <meta name="description" content="GIGA-TMS 產品安全公告（Product Security Advisories）公開入口。">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#05070c">
   <link rel="stylesheet" href="/assets/advisory.css">
 </head>
@@ -13,11 +14,12 @@
     <div class="shell header-inner">
       <a class="brand" href="/" aria-label="GIGA-TMS Document Portal home">
         <img class="header-mark" src="/assets/GIGA-TMS_wordmark_color_transparent.png" alt="GIGA-TMS INC. Quality, Delivery &amp; Service">
-        <span class="brand-context">PRODUCT SECURITY UPDATES</span>
+        <span class="brand-context">PRODUCT SECURITY ADVISORIES</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="/">Home</a>
+        <a href="/">首頁<br><span>Home</span></a>
         <a href="/doc/red-da/">RED-DA Doc</a>
+        <a href="/security-advisories/" aria-current="page">安全公告<br><span>Advisories</span></a>
         <a class="nav-cta" href="https://security.gigatms.com.tw" target="_blank" rel="noopener">資安通報 ↗</a>
       </nav>
     </div>
@@ -25,38 +27,65 @@
 
   <main class="main">
     <div class="shell">
-      <p class="eyebrow">PRODUCT SECURITY · PUBLIC UPDATE CHANNEL</p>
-      <h1>Product security updates.<br><span>Published when ready.</span></h1>
-      <p class="lead">GIGA-TMS 產品安全更新公告入口，提供已完成修正、核准公開的產品安全更新與文件連結。<span class="zh">Security issues are coordinated and published after the applicable fix, release and communication review are complete.</span></p>
+      <p class="eyebrow">PRODUCT SECURITY ADVISORIES · 產品安全公告</p>
+      <h1>Product security advisories.<br><span>Published when users can act.</span></h1>
+      <p class="lead">GIGA-TMS 產品安全公告入口。經確認之漏洞，於安全更新或暫時緩解措施可用且經核准後公開；漏洞已遭利用或細節已公開時，為保護使用者，可能提前發布。<span class="zh">Verified vulnerabilities are published once a security update or interim mitigation is available and the advisory has been approved. Where a vulnerability is already being exploited or its details are public, we may publish sooner to protect users.</span></p>
       <div class="hero-actions">
-        <a class="button button-primary" href="https://security.gigatms.com.tw" target="_blank" rel="noopener">前往資安通報站 · Security reporting <span aria-hidden="true">↗</span></a>
-        <a class="button button-secondary" href="#updates">查看產品更新公告 · View updates</a>
+        <a class="button button-primary" href="https://security.gigatms.com.tw" target="_blank" rel="noopener">前往資安通報站 · Report a vulnerability <span aria-hidden="true">↗</span></a>
+        <a class="button button-secondary" href="#advisories">查看安全公告 · View advisories</a>
       </div>
 
-      <section class="summary-grid" aria-label="Security update policy summary">
-        <article class="summary-card"><strong>PUBLIC UPDATES</strong><span>Only reviewed and approved notices are listed here.</span></article>
-        <article class="summary-card"><strong>COORDINATED</strong><span>Reports are handled through the GIGA-TMS security channel.</span></article>
-        <article class="summary-card"><strong>PRODUCT FOCUS</strong><span>Product, firmware and security-relevant update records.</span></article>
+      <section class="summary-grid" aria-label="Security advisory policy summary">
+        <article class="summary-card"><strong>PUBLIC ADVISORIES</strong><span>僅列出已審查並核准公開的安全公告。<br>Only reviewed and approved advisories are listed.</span></article>
+        <article class="summary-card"><strong>COORDINATED DISCLOSURE</strong><span>通報案件透過 GIGA-TMS 資安通報站協調處理。<br>Reports are coordinated through the GIGA-TMS security channel.</span></article>
+        <article class="summary-card"><strong>ACTIONABLE INFORMATION</strong><span>公告提供受影響產品、嚴重度、狀態與日期。<br>Advisories provide scope, severity, status and dates.</span></article>
       </section>
 
-      <section class="advisory-section" id="updates" aria-labelledby="updates-title">
+      <section class="advisory-section" id="advisories" aria-labelledby="advisories-title">
         <div class="advisory-head">
-          <div><p class="eyebrow">SECURITY UPDATE REGISTER</p><h2 id="updates-title">GIGA-TMS Product Security Updates</h2></div>
-          <p>公告欄位預留 Advisory、產品／範圍、嚴重性、狀態與最後更新日期，供未來依產品更新紀錄逐筆加入。</p>
+          <div><p class="eyebrow">PUBLIC ADVISORY REGISTER · 公開公告清單</p><h2 id="advisories-title">GIGA-TMS 產品安全公告<span class="heading-en">Product Security Advisories</span></h2></div>
+          <p>各公告列出受影響產品、嚴重度、狀態、首次發布日及最後更新日。<span class="en">Each advisory lists affected products, severity, status, first publication date and last updated date.</span></p>
         </div>
         <div class="table-shell">
           <table>
-            <thead><tr><th scope="col">Advisory</th><th scope="col">Product / Scope</th><th scope="col">Severity</th><th scope="col">Status</th><th scope="col">Last Updated</th></tr></thead>
+            <thead>
+              <tr>
+                <th scope="col">公告編號<br><span>Advisory ID</span></th>
+                <th scope="col">CVE</th>
+                <th scope="col">產品／範圍<br><span>Product / Scope</span></th>
+                <th scope="col">嚴重度<br><span>Severity</span></th>
+                <th scope="col">狀態<br><span>Status</span></th>
+                <th scope="col">首次發布日<br><span>First Published</span></th>
+                <th scope="col">最後更新日<br><span>Last Updated</span></th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td colspan="5"><div class="advisory-empty"><strong>No public product security updates published yet.</strong>本頁目前為規畫中的公告清單。只有完成修正、產品版本確認與公開核准的公告，才會加入正式紀錄。</div></td></tr>
+              <tr><td colspan="7"><div class="advisory-empty"><strong>目前尚無已發布之產品安全公告。最後檢查：2026-10-06</strong><span>經確認之漏洞，將於安全更新或緩解措施可用並經核准後公布於此。</span><span class="en">No product security advisories have been published. Verified vulnerabilities are listed here once a security update or mitigation is available and the advisory is approved. Last checked: 2026-10-06</span></div></td></tr>
             </tbody>
           </table>
         </div>
+
+        <section class="field-guide" aria-labelledby="field-guide-title">
+          <div class="field-guide-head"><div><p class="eyebrow">ADVISORY FIELD GUIDE · 欄位說明</p><h3 id="field-guide-title">每一筆公告都具備可追溯欄位</h3></div><p>欄位定義對應內部公告範本與審核要求。<span class="en">Field definitions follow the controlled advisory template and review requirements.</span></p></div>
+          <div class="field-grid">
+            <article><strong>公告編號 · Advisory ID</strong><p>格式：<code>GTMS-SA-YYYY-###</code></p></article>
+            <article><strong>CVE</strong><p>已申請則填入；未申請時顯示「—」。<span class="en">Use “—” when no CVE has been assigned.</span></p></article>
+            <article><strong>嚴重度 · Severity</strong><p>標示 <code>CVSS v4.0</code> 分數與等級，例如 <code>8.1 High</code>。</p></article>
+            <article><strong>狀態 · Status</strong><p>已發布 · Published／已更新 · Updated／已撤回 · Withdrawn</p></article>
+            <article><strong>首次發布日 · First Published</strong><p>公告首次公開的日期；修訂時不變。<span class="en">The date the advisory was first published; it does not change when revised.</span></p></article>
+            <article><strong>最後更新日 · Last Updated</strong><p>公告內容最近一次更新的日期。<span class="en">The date the advisory content was most recently updated.</span></p></article>
+          </div>
+        </section>
+      </section>
+
+      <section class="publication-notes" aria-label="Additional publication notes">
+        <article class="policy-card"><h3>已超過支援期的產品 · Products beyond support life</h3><p>若漏洞影響已超過支援期之產品，公告中會說明，並提供緩解或汰換建議。</p><p class="en">If a vulnerability affects a product beyond its support life, the advisory will say so and provide mitigation or replacement guidance.</p></article>
+        <article class="policy-card"><h3>公開範圍界線 · Publication boundary</h3><p>技術檔案、SBOM、未修正漏洞細節、內部風險評估與 OEM 機密資料不會放在公開安全公告頁。</p><p class="en">Technical files, SBOMs, unremediated vulnerability details, internal risk assessments and OEM confidential information are not published here.</p></article>
       </section>
 
       <section class="policy" aria-label="Reporting and publication policy">
-        <article class="policy-card"><h3>Report a vulnerability</h3><p>如要通報產品安全問題，請前往 GIGA-TMS 資安通報網站，依該站公告的通報流程提交資訊。</p><a class="button button-secondary" href="https://security.gigatms.com.tw" target="_blank" rel="noopener">Open security.gigatms.com.tw ↗</a></article>
-        <article class="policy-card"><h3>Publication boundary</h3><p>技術檔案、SBOM、未修正漏洞細節、內部風險評估與 OEM 機密資料不會放在公開更新公告頁。</p><a class="button button-secondary" href="/">Return to Document Portal</a></article>
+        <article class="policy-card"><h3>漏洞通報 · Report a vulnerability</h3><p>如要通報產品安全問題，請前往 GIGA-TMS 資安通報網站，依該站公告的通報流程提交資訊。</p><p class="en">To report a product security issue, visit the GIGA-TMS security reporting site and follow its reporting process.</p><a class="button button-secondary" href="https://security.gigatms.com.tw" target="_blank" rel="noopener">開啟資安通報站 · Open security.gigatms.com.tw ↗</a></article>
+        <article class="policy-card"><h3>文件入口 · Document portal</h3><p>本頁為產品安全公告入口；一般合規文件請返回 GIGA-TMS Document Portal。</p><p class="en">This page is the product security advisory channel. Return to the GIGA-TMS Document Portal for compliance documents.</p><a class="button button-secondary" href="/">回到文件入口 · Return to Document Portal</a></article>
       </section>
     </div>
   </main>
@@ -65,9 +94,9 @@
     <div class="shell footer-grid">
       <div><strong class="footer-company-name">GIGA-TMS INC.</strong><p>Document Office<br><a href="mailto:doc@gigatms.com.tw">doc@gigatms.com.tw</a></p></div>
       <div><p class="footer-label">DOCUMENTS</p><a href="/doc/red-da/">RED-DA Doc</a><a href="/doc/red-da/archive/">Public archive</a></div>
-      <div><p class="footer-label">SECURITY</p><a href="https://security.gigatms.com.tw" target="_blank" rel="noopener">security.gigatms.com.tw ↗</a><a href="/security-advisories/">Product security updates</a></div>
+      <div><p class="footer-label">SECURITY</p><a href="https://security.gigatms.com.tw" target="_blank" rel="noopener">資安通報 · Security reporting ↗</a><a href="/security-advisories/">產品安全公告 · Product Security Advisories</a></div>
     </div>
-    <div class="shell footer-bottom"><span>GIGA-TMS INC. · Product Security Updates</span><span>doc.gigatms.com.tw · Planning preview</span></div>
+    <div class="shell footer-bottom"><span>GIGA-TMS INC. · Product Security Advisories</span><span>doc.gigatms.com.tw · Document Portal</span></div>
   </footer>
 </body>
 </html>

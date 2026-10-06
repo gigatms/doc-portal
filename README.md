@@ -23,7 +23,7 @@ doc.gigatms.com.tw/
 ├── assets/
 │   ├── style.css                           # 暗色首頁共用樣式
 │   ├── doc.css                             # 文件目錄與 archive 樣式
-│   ├── advisory.css                         # 產品安全更新公告頁樣式
+│   ├── advisory.css                         # 產品安全公告頁樣式
 │   └── GIGA-TMS_wordmark_color_transparent.png
 ├── doc/
     ├── red-da/
@@ -33,8 +33,9 @@ doc.gigatms.com.tw/
     │       └── index.html                  # Phase 1 RED-DA 歷史文件 archive
     └── cra/
         └── index.html                      # Phase 2 CRA Doc 規畫與預留頁
+├── robots.txt                                # 預覽期間禁止搜尋引擎索引
 └── security-advisories/
-    └── index.html                           # 產品安全更新公告頁
+    └── index.html                           # 產品安全公告（Advisories）頁
 ```
 
 ## URL rules
@@ -78,5 +79,18 @@ This is a static planning draft. ER750A is staged in a review branch and is not 
 - Company website: <https://www.gigatms.com.tw>
 - Security reporting: <https://security.gigatms.com.tw>
 - Future document portal: <https://doc.gigatms.com.tw>
-- Product security updates: `/security-advisories/`
+- Product security advisories: `/security-advisories/`
 - Security reporting: <https://security.gigatms.com.tw>
+
+## Product security advisory review status
+
+The advisory page incorporates the 2026-10-06 review direction:
+
+- The public name is **產品安全公告 / Product Security Advisories**.
+- Publication timing states that a verified vulnerability may be published when a security update or interim mitigation is available and approved, or sooner when exploitation or public disclosure requires user protection.
+- Internal planning language was removed from the public empty state. The page shows the last checked date: `2026-10-06`.
+- The register now reserves seven fields: Advisory ID, CVE, Product / Scope, Severity, Status, First Published and Last Updated.
+- The page includes support-life and publication-boundary notes, and uses bilingual headings and descriptions.
+- The preview page uses `noindex, nofollow`, and the preview `robots.txt` disallows crawling. Remove these preview restrictions before the official `doc.gigatms.com.tw` launch.
+
+The integrator/OEM pre-notification paragraph remains pending the POL-001 §9 decision and is intentionally not presented as a public commitment yet.
