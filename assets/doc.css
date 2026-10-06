@@ -65,6 +65,20 @@ h3 { margin: 0; color: var(--white); font-size: 24px; }
 .model-letter { display: grid; place-items: center; width: 58px; height: 58px; color: var(--white); background: linear-gradient(145deg, var(--blue), var(--purple)); font-family: var(--mono); font-size: 13px; font-weight: 900; }
 .model-empty h3 { font-size: 20px; }
 .model-empty p { margin: 7px 0 0; color: #8998b0; font-size: 13px; }
+.model-record { display: grid; grid-template-columns: 74px 1fr auto; gap: 18px; align-items: center; margin-top: 25px; padding: 20px 0 4px; border-top: 1px solid var(--line); }
+.record-main { min-width: 0; }
+.record-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.record-heading h3 { font-size: 20px; }
+.record-status { color: var(--green); font-family: var(--mono); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.record-status::before { display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 50%; background: currentColor; content: ""; }
+.record-main > p { margin: 7px 0 0; color: #aebbd0; font-size: 13px; }
+.record-meta { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 0; }
+.record-meta div { min-width: 145px; }
+.record-meta dt { color: #7f8da4; font-family: var(--mono); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+.record-meta dd { margin: 2px 0 0; color: #dce6f5; font-size: 12px; }
+.record-download { padding: 11px 14px; border: 1px solid rgba(22, 119, 255, .6); color: var(--white); background: rgba(22, 119, 255, .16); font-size: 12px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+.record-download:hover { border-color: var(--blue); background: var(--blue); }
+.record-download b { margin-left: 5px; color: var(--blue-light); }
 .placeholder { color: #d97bad; font-family: var(--mono); font-size: 10px; white-space: nowrap; }
 .section { max-width: 920px; margin-top: 62px; padding-top: 28px; border-top: 1px solid var(--line); }
 .section p { color: #aebbd0; }
@@ -83,5 +97,5 @@ td { color: #92a0b5; }
 .footer-grid a { display: block; margin-top: 8px; color: #e1e8f3; font-size: 12px; text-decoration: none; }
 .footer-grid a:hover { color: var(--blue-light); }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding: 17px 0 22px; border-top: 1px solid rgba(255, 255, 255, .1); color: #677791; font-family: var(--mono); font-size: 9px; }
-@media (max-width: 800px) { .family-grid { grid-template-columns: 1fr; } .az-nav { grid-template-columns: repeat(9, 1fr); } .model-empty { grid-template-columns: 58px 1fr; } .model-empty .placeholder { grid-column: 2; } .footer-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 570px) { .shell { width: min(var(--max), calc(100% - 28px)); } .header-mark { width: 166px; } .brand-context { display: none; } .nav a:not(.nav-cta) { display: none; } .main { padding-top: 58px; } .family-card h2 { margin-top: 42px; } .az-index { padding: 19px; } .az-heading { align-items: flex-start; flex-direction: column; gap: 4px; } .az-nav { grid-template-columns: repeat(6, 1fr); } .model-empty { grid-template-columns: 1fr; } .model-empty .placeholder { grid-column: auto; } .footer-grid { grid-template-columns: 1fr; gap: 24px; } .footer-bottom { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 800px) { .family-grid { grid-template-columns: 1fr; } .az-nav { grid-template-columns: repeat(9, 1fr); } .model-empty, .model-record { grid-template-columns: 58px 1fr; } .model-empty .placeholder, .model-record .record-download { grid-column: 2; justify-self: start; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 570px) { .shell { width: min(var(--max), calc(100% - 28px)); } .header-mark { width: 166px; } .brand-context { display: none; } .nav a:not(.nav-cta) { display: none; } .main { padding-top: 58px; } .family-card h2 { margin-top: 42px; } .az-index { padding: 19px; } .az-heading { align-items: flex-start; flex-direction: column; gap: 4px; } .az-nav { grid-template-columns: repeat(6, 1fr); } .model-empty, .model-record { grid-template-columns: 1fr; } .model-empty .placeholder, .model-record .record-download { grid-column: auto; } .record-meta { display: grid; gap: 9px; } .footer-grid { grid-template-columns: 1fr; gap: 24px; } .footer-bottom { align-items: flex-start; flex-direction: column; } }

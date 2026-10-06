@@ -8,7 +8,7 @@
 
 第一階段先完成 RED-DA Doc 公開入口、單一 A–Z 型號索引、型號文件 metadata、簽署核准後的 PDF 下載與不可變更的歷史版本 archive。產品家族（例如 RFID、125 kHz 與 GP series）保留在每筆文件 metadata，不再於 `/doc/red-da/` 下分成不同目錄或區塊。
 
-目前頁面中的型號、版本、日期、文件編號與 PDF 連結仍是 planning placeholder，不代表任何已核准公開的正式文件。
+ER750A series 是目前第一份待審核的 RED-DA 文件候選項目。其 PDF、A–Z 索引項目與 SHA-256 checksum 已放入獨立發布分支，必須完成工程與文件管制審核並合併 Pull Request 後，才會成為公開文件。其餘型號仍為 planning placeholder。
 
 ### Phase 2 — CRA Doc
 
@@ -23,17 +23,19 @@ doc.gigatms.com.tw/
 ├── assets/
 │   ├── style.css                           # 暗色首頁共用樣式
 │   ├── doc.css                             # 文件目錄與 archive 樣式
-│   ├── advisory.css                         # 產品安全更新公告頁樣式
+│   ├── advisory.css                         # 產品安全公告頁樣式
 │   └── GIGA-TMS_wordmark_color_transparent.png
 ├── doc/
     ├── red-da/
     │   ├── index.html                      # Phase 1 RED-DA Doc 目錄
+    │   ├── ER750A.pdf                       # 首份 RED-DA 候選文件（審核中）
     │   └── archive/
     │       └── index.html                  # Phase 1 RED-DA 歷史文件 archive
     └── cra/
         └── index.html                      # Phase 2 CRA Doc 規畫與預留頁
+├── robots.txt                                # 預覽期間禁止搜尋引擎索引
 └── security-advisories/
-    └── index.html                           # 產品安全更新公告頁
+    └── index.html                           # 產品安全公告（Advisories）頁
 ```
 
 ## URL rules
@@ -70,12 +72,25 @@ CRA immutable historical version:
 
 ## Status
 
-This is a static planning draft. No GitHub repository, DNS configuration, production deployment or official DoC PDF publication was performed. Before publication, confirm the original company-approved SVG/AI/EPS wordmark, final product list, PDF approval workflow, CNAME/DNS, canonical URLs, sitemap, robots policy and reviewer ownership.
+This is a static planning draft. ER750A is staged in a review branch and is not publicly published until the required Pull Request approvals are complete. Before publication, confirm the original company-approved SVG/AI/EPS wordmark, final product list, PDF approval workflow, CNAME/DNS, canonical URLs, sitemap, robots policy and reviewer ownership.
 
 ## Official links
 
 - Company website: <https://www.gigatms.com.tw>
 - Security reporting: <https://security.gigatms.com.tw>
 - Future document portal: <https://doc.gigatms.com.tw>
-- Product security updates: `/security-advisories/`
+- Product security advisories: `/security-advisories/`
 - Security reporting: <https://security.gigatms.com.tw>
+
+## Product security advisory review status
+
+The advisory page incorporates the 2026-10-06 review direction:
+
+- The public name is **產品安全公告 / Product Security Advisories**.
+- Publication timing states that a verified vulnerability may be published when a security update or interim mitigation is available and approved, or sooner when exploitation or public disclosure requires user protection.
+- Internal planning language was removed from the public empty state. The page shows the last checked date: `2026-10-06`.
+- The register now reserves seven fields: Advisory ID, CVE, Product / Scope, Severity, Status, First Published and Last Updated.
+- The page includes support-life and publication-boundary notes, and uses bilingual headings and descriptions.
+- The preview page uses `noindex, nofollow`, and the preview `robots.txt` disallows crawling. Remove these preview restrictions before the official `doc.gigatms.com.tw` launch.
+
+The integrator/OEM pre-notification paragraph remains pending the POL-001 §9 decision and is intentionally not presented as a public commitment yet.
