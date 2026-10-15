@@ -83,7 +83,7 @@ a { color: inherit; }
 .document-tile { position: relative; display: flex; flex-direction: column; min-height: 286px; padding: 22px 22px 23px; border: 1px solid var(--line); color: #d9e3f2; background: rgba(255, 255, 255, .035); text-decoration: none; transition: transform .2s ease, border-color .2s ease, background .2s ease; overflow: hidden; }
 .document-tile:hover { border-color: rgba(92, 159, 255, .65); background: rgba(22, 119, 255, .09); transform: translateY(-3px); }
 .document-tile-active { border-color: rgba(22, 119, 255, .72); background: linear-gradient(145deg, rgba(22, 119, 255, .13), rgba(255, 255, 255, .03)); }
-.document-tile-planned { border-style: dashed; opacity: .82; }
+.document-tile-phase2 { border-style: dashed; opacity: .82; }
 .tile-top { display: flex; align-items: center; justify-content: space-between; color: #b1bfd4; font-family: var(--mono); font-size: 10px; }
 .tile-status { color: var(--green); font-size: 9px; letter-spacing: .08em; }
 .tile-status i { display: inline-block; width: 6px; height: 6px; margin-right: 5px; border-radius: 50%; background: var(--green); vertical-align: 1px; }
