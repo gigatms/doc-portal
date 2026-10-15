@@ -70,6 +70,10 @@ a { color: inherit; }
 .section-copy { align-self: end; max-width: 610px; color: #aeb9ca; font-size: 16px; line-height: 1.75; }
 .section-copy p { margin: 0; }
 .section-copy p + p { margin-top: 13px; color: #71819b; font-size: 14px; }
+.section-copy .phase2-alert { margin-top: 18px; padding: 13px 15px; border-left: 3px solid var(--blue); color: #dce6f5; background: rgba(8, 121, 255, .09); font-size: 14px; line-height: 1.65; }
+.section-copy .phase2-alert strong { color: var(--white); }
+.section-copy .phase2-alert a { color: var(--blue-light); text-decoration: underline; text-underline-offset: 3px; }
+.section-copy .phase2-alert-en { margin-top: 9px; color: #aebbd0; font-size: 13px; }
 .metric-row { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 72px; border-top: 1px solid var(--line); }
 .metric-row div { display: flex; flex-direction: column; gap: 5px; min-height: 119px; padding: 25px 18px 20px 0; font-family: var(--mono); }
 .metric-row div + div { padding-left: 21px; border-left: 1px solid var(--line); }
@@ -95,13 +99,6 @@ a { color: inherit; }
 .document-tile p { margin: 10px 0 0; color: #8998b0; font-size: 13px; }
 .tile-link { margin-top: 24px; color: var(--blue-light); font-size: 12px; font-weight: 800; }
 .tile-link b { margin-left: 7px; font-size: 15px; }
-
-.verification { padding: 90px 0 100px; background: var(--dark); }
-.verification-list { padding-top: 1px; }
-.verification-list div { display: grid; grid-template-columns: 42px 150px 1fr; gap: 12px; align-items: center; min-height: 65px; border-bottom: 1px solid var(--line); }
-.verification-list span { color: #d97bad; font-family: var(--mono); font-size: 11px; font-weight: 800; }
-.verification-list strong { color: #e5ebf5; font-size: 15px; }
-.verification-list p { margin: 0; color: #8291aa; font-size: 13px; }
 
 .support { padding: 73px 0 88px; background: #080c16; border-top: 1px solid rgba(255, 255, 255, .07); }
 .support-grid { display: grid; grid-template-columns: 1fr 1.12fr; gap: 90px; }
@@ -153,8 +150,6 @@ a { color: inherit; }
   .metric-row div:nth-child(3) { padding-left: 0; border-left: 0; }
   .document-grid { grid-template-columns: 1fr; }
   .document-tile:first-child { grid-column: auto; }
-  .verification-list div { grid-template-columns: 35px 1fr; gap: 10px; padding: 14px 0; }
-  .verification-list p { grid-column: 2; }
   .footer-grid { grid-template-columns: 1fr; gap: 27px; }
   .footer-bottom { align-items: flex-start; flex-direction: column; }
 }

@@ -23,6 +23,8 @@ GIGA-TMS 公開文件入口網站，提供已簽署、已核准公開的 RED-DA 
 
 第二階段保留 CRA Doc 空間，公開公布節點為 **2027/12/11**。CRA 在 Phase 1 不列為可下載文件；目前保留 `/doc/cra/` 單一 A–Z 型號索引空間，不依 RFID、125 kHz 或 GP Series 分成產品家族頁面。產品家族資訊只保留在每筆文件 metadata 中，待相關評估與公開核准完成後，再逐步加入正式 PDF 下載連結。
 
+CRA Article 14 通報義務自 **2026/9/11** 起已適用；產品安全通報請參閱 <https://security.gigatms.com.tw>。 CRA Article 14 reporting obligations apply from **11 September 2026**; product security reports should be submitted through <https://security.gigatms.com.tw>.
+
 ## Directory structure
 
 ```text
@@ -52,27 +54,29 @@ doc.gigatms.com.tw/
 
 ## URL rules
 
-Current model alias:
+Current model alias（主文件路徑）：
 
 ```text
 /doc/red-da/<model>.pdf
 ```
 
-Immutable historical version:
+Immutable historical version（歷史版本路徑）：
 
 ```text
 /doc/red-da/archive/<model>-v<version>-<yyyy-mm-dd>.pdf
 ```
 
-所有型號在 HTML 目錄中依 A–Z 排列；產品家族僅作為 metadata，不直接作為主要 PDF URL 的必要路徑段，以避免分類變更時破壞既有產品 URL。
+所有型號在 HTML 目錄中依 A–Z 排列；產品家族僅作為 metadata，不直接作為主要 PDF URL 的必要路徑段，以避免分類變更時破壞既有產品 URL。主文件 URL 與歷史版本 URL 一旦對外公布即不可變更、不可重用，也不可改指向其他 PDF；若內容更新，必須建立新的版本 URL 並保留原 URL。
 
-CRA model alias：
+All model records are sorted in A–Z order. Product family is metadata rather than a required PDF URL path segment. Once a current or historical URL is published, it is immutable: do not replace, reuse or retarget it. Issue a new version URL for any update and retain the original URL.
+
+CRA model alias（未來主文件路徑）：
 
 ```text
 /doc/cra/<model>.pdf
 ```
 
-CRA immutable historical version：
+CRA immutable historical version（未來歷史版本路徑）：
 
 ```text
 /doc/cra/archive/<model>-v<version>-<yyyy-mm-dd>.pdf
