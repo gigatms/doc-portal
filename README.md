@@ -1,14 +1,14 @@
 # doc.gigatms.com.tw Document Portal v2.1
 
-GIGA-TMS 公開文件入口網站，提供已簽署、已核准公開的 RED-DA EU Declaration of Conformity 文件查詢與下載。網站沿用 `security.gigatms.com.tw` 的同系列視覺，並保留 Phase 2 CRA Doc 文件空間。
+GIGA-TMS 公開文件入口網站，提供已簽署、已核准公開的 EU DoC (RED) Declaration of Conformity 文件查詢與下載。網站沿用 `security.gigatms.com.tw` 的同系列視覺，並保留 Phase 2 CRA Doc 文件空間。
 
 ## Two-phase document architecture
 
-### Phase 1 — RED-DA Doc
+### Phase 1 — EU DoC (RED)
 
-第一階段提供 RED-DA Doc 公開入口、單一 A–Z 型號索引、型號文件 metadata、簽署核准後的 PDF 下載與不可變更的歷史版本 archive。產品家族（例如 RFID、125 kHz 與 GP series）保留在每筆文件 metadata，不在 `/doc/red-da/` 下分成不同目錄或區塊。
+第一階段提供 EU DoC (RED) 公開入口、單一 A–Z 型號索引、型號文件 metadata、簽署核准後的 PDF 下載與不可變更的歷史版本 archive。產品家族（例如 RFID、125 kHz 與 GP series）保留在每筆文件 metadata，不在 `/doc/eu-doc-red/` 下分成不同目錄或區塊。
 
-目前已公開的 RED-DA 型號包括：
+目前已公開的 EU DoC (RED) 型號包括：
 
 - ER750A
 - PCR300A
@@ -37,15 +37,15 @@ doc.gigatms.com.tw/
 │   ├── advisory.css                        # 產品安全公告頁樣式
 │   └── GIGA-TMS_wordmark_color_transparent.png
 ├── doc/
-│   ├── red-da/
-│   │   ├── index.html                      # Phase 1 RED-DA A–Z 目錄
+│   ├── eu-doc-red/
+│   │   ├── index.html                      # Phase 1 EU DoC (RED) A–Z 目錄
 │   │   ├── ER750A.pdf
 │   │   ├── PCR300A_PCR300F.pdf
 │   │   ├── PCR300M.pdf
 │   │   ├── PCR330A.pdf
 │   │   ├── PCR330M.pdf
 │   │   └── archive/
-│   │       └── index.html                  # RED-DA 歷史文件 archive
+│   │       └── index.html                  # EU DoC (RED) 歷史文件 archive
 │   └── cra/
 │       └── index.html                      # Phase 2 CRA Doc 型號索引空間
 └── security-advisories/
@@ -54,16 +54,16 @@ doc.gigatms.com.tw/
 
 ## URL rules
 
-Current model alias（主文件路徑）：
+Current model alias（主文件路徑；本月份試用路徑）：
 
 ```text
-/doc/red-da/<model>.pdf
+/doc/eu-doc-red/<model>.pdf
 ```
 
 Immutable historical version（歷史版本路徑）：
 
 ```text
-/doc/red-da/archive/<model>-v<version>-<yyyy-mm-dd>.pdf
+/doc/eu-doc-red/archive/<model>-v<version>-<yyyy-mm-dd>.pdf
 ```
 
 所有型號在 HTML 目錄中依 A–Z 排列；產品家族僅作為 metadata，不直接作為主要 PDF URL 的必要路徑段，以避免分類變更時破壞既有產品 URL。主文件 URL 與歷史版本 URL 一旦對外公布即不可變更、不可重用，也不可改指向其他 PDF；若內容更新，必須建立新的版本 URL 並保留原 URL。
@@ -82,9 +82,21 @@ CRA immutable historical version（未來歷史版本路徑）：
 /doc/cra/archive/<model>-v<version>-<yyyy-mm-dd>.pdf
 ```
 
+## Trial directory migration
+
+本月份為目錄名稱與路徑試用期，新的 Phase 1 主要入口為：
+
+```text
+/doc/eu-doc-red/
+/doc/eu-doc-red/<model>.pdf
+/doc/eu-doc-red/archive/<model>-v<version>-<yyyy-mm-dd>.pdf
+```
+
+The `/doc/eu-doc-red/` route is the current trial canonical route for the neutral catalogue name **EU DoC (RED)**. The former `/doc/red-da/` catalogue page remains only as a temporary compatibility redirect during the trial period; it is not the canonical catalogue route. Existing PDF files under `/doc/red-da/<model>.pdf` remain reachable temporarily so previously shared links do not break while the new route is evaluated.
+
 ## Public / internal boundary
 
-公開入口只放已簽署、已核准公開的 RED-DA Doc 或未來 CRA Doc。技術檔案、SBOM、資安風險評估、威脅模型、測試報告、漏洞資料與 OEM 機密文件維持在內部受控系統，不放入 `doc.gigatms.com.tw`。
+公開入口只放已簽署、已核准公開的 EU DoC (RED) 或未來 CRA Doc。技術檔案、SBOM、資安風險評估、威脅模型、測試報告、漏洞資料與 OEM 機密文件維持在內部受控系統，不放入 `doc.gigatms.com.tw`。
 
 ## Status
 
