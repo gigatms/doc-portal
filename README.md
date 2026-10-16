@@ -1,6 +1,6 @@
-# doc.gigatms.com.tw Document Portal v2.1
+# doc.gigatms.com.tw Document Portal v2.2
 
-GIGA-TMS 公開文件入口網站，提供已簽署、已核准公開的 EU DoC (RED) Declaration of Conformity 文件查詢與下載。網站沿用 `security.gigatms.com.tw` 的同系列視覺，並保留 Phase 2 CRA Doc 文件空間。
+GIGA-TMS 公開文件入口網站，提供已簽署、已核准公開的 EU DoC (RED) Declaration of Conformity 文件查詢與下載。網站沿用 `security.gigatms.com.tw` 的同系列視覺，並保留 Phase 2 CRA DoC 文件空間。
 
 ## Two-phase document architecture
 
@@ -19,9 +19,9 @@ GIGA-TMS 公開文件入口網站，提供已簽署、已核准公開的 EU DoC 
 
 `PCR300A` 與 `PCR300F` 共同對應同一份 EU DoC PDF，網站保留兩筆型號索引以方便查詢，但不重複存放文件。
 
-### Phase 2 — CRA Doc
+### Phase 2 — CRA DoC
 
-第二階段保留 CRA Doc 空間，公開公布節點為 **2027/12/11**。CRA 在 Phase 1 不列為可下載文件；目前保留 `/doc/cra/` 單一 A–Z 型號索引空間，不依 RFID、125 kHz 或 GP Series 分成產品家族頁面。產品家族資訊只保留在每筆文件 metadata 中，待相關評估與公開核准完成後，再逐步加入正式 PDF 下載連結。
+第二階段保留 CRA DoC 空間。對於自 **2027/12/11** 起投放歐盟市場的產品，CRA DoC 最遲於該日起提供；目前保留 `/doc/cra/` 單一 A–Z 型號索引空間，不依 RFID、125 kHz 或 GP Series 分成產品家族頁面。產品家族資訊只保留在每筆文件 metadata 中，正式核准的文件將依產品逐筆加入 PDF 下載連結。
 
 CRA Article 14 通報義務自 **2026/9/11** 起已適用；產品安全通報請參閱 <https://security.gigatms.com.tw>。 CRA Article 14 reporting obligations apply from **11 September 2026**; product security reports should be submitted through <https://security.gigatms.com.tw>.
 
@@ -29,7 +29,7 @@ CRA Article 14 通報義務自 **2026/9/11** 起已適用；產品安全通報�
 
 ```text
 doc.gigatms.com.tw/
-├── index.html                              # 公開文件入口首頁 v2.1
+├── index.html                              # 公開文件入口首頁 v2.2
 ├── CNAME                                   # GitHub Pages 自訂網域
 ├── assets/
 │   ├── style.css                           # 首頁共用樣式
@@ -47,7 +47,7 @@ doc.gigatms.com.tw/
 │   │   └── archive/
 │   │       └── index.html                  # EU DoC (RED) 歷史文件 archive
 │   └── cra/
-│       └── index.html                      # Phase 2 CRA Doc 型號索引空間
+│       └── index.html                      # Phase 2 CRA DoC 型號索引空間
 └── security-advisories/
     └── index.html                          # 產品安全公告頁
 ```
@@ -96,13 +96,13 @@ The `/doc/eu-doc-red/` route is the current trial canonical route for the neutra
 
 ## Public / internal boundary
 
-公開入口只放已簽署、已核准公開的 EU DoC (RED) 或未來 CRA Doc。技術檔案、SBOM、資安風險評估、威脅模型、測試報告、漏洞資料與 OEM 機密文件維持在內部受控系統，不放入 `doc.gigatms.com.tw`。
+公開入口只放已簽署、已核准公開的 EU DoC (RED) 或未來 CRA DoC。技術檔案、SBOM、資安風險評估、威脅模型、測試報告、漏洞資料與 OEM 機密文件維持在內部受控系統，不放入 `doc.gigatms.com.tw`。
 
 ## Status
 
 The GitHub Pages site is published from `main` at [https://doc.gigatms.com.tw](https://doc.gigatms.com.tw). The public portal is limited to signed and approved documents. Internal technical evidence, SBOMs, risk assessments and OEM-confidential material remain outside this repository.
 
-The current public release is **Document Portal v2.1**. The custom domain is configured with HTTPS enforcement.
+The current public release is **Document Portal v2.2**. The custom domain is configured with HTTPS enforcement.
 
 ## Official links
 
